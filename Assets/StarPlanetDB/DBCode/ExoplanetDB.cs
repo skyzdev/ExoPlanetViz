@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-public class StarNamePosition {
+public class StarData {
     public string name;
     public Vector3 position;
+    public int numberPlanets;
 }
 
 public class ExoplanetDB : MonoBehaviour
@@ -83,12 +84,15 @@ public class ExoplanetDB : MonoBehaviour
         return starList.Distinct().ToList();
     }
 
-    List<StarNamePosition> getStarNamePosition() 
+    List<StarData> getStarNamePosition() 
     {
         var starList = from s in stars.dataArray
-                                      select new StarNamePosition { 
-                            name = s.Pl_hostname, position = GetStarLocation(s) 
+                                      select new StarData { 
+                            name = s.Pl_hostname, 
+                            position = GetStarLocation(s),
+                            numberPlanets = s.Pl_pnum 
                         };
+        // return starList.Take(100).ToList(); for the short list
         return starList.ToList();
     }
 }
