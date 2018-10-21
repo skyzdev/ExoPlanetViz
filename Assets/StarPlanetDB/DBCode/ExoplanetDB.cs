@@ -30,7 +30,7 @@ public class ExoplanetDB : MonoBehaviour
                 Debug.LogFormat("  Star {0} has {1} planets", star.Pl_hostname, star.Pl_pnum);
             }
         }
-        List<StarNamePosition> starList2 = getStarNamePosition();
+        List<StarData> starList2 = getStarNamePosition();
         if (starList2.Count > 0)
         {
             Debug.LogFormat("There are {0} stars", starList2.Count);
