@@ -10,7 +10,7 @@ using System.Collections.Generic;
 /// can be serialized onto an asset data file.
 /// 
 [System.Serializable]
-public class Exoplanet_Data_PLANETS : ScriptableObject 
+public class Exoplanet_Data_Planets : ScriptableObject 
 {	
     [HideInInspector] [SerializeField] 
     public string SheetName = "";
@@ -19,7 +19,7 @@ public class Exoplanet_Data_PLANETS : ScriptableObject
     public string WorksheetName = "";
     
     // Note: initialize in OnEnable() not here.
-    public Exoplanet_Data_PLANETSData[] dataArray;
+    public Exoplanet_Data_PlanetsData[] dataArray;
     
     void OnEnable()
     {		
@@ -32,7 +32,7 @@ public class Exoplanet_Data_PLANETS : ScriptableObject
         //    because OnEnable is called whenever Unity builds.
         // 		
         if (dataArray == null)
-            dataArray = new Exoplanet_Data_PLANETSData[0];
+            dataArray = new Exoplanet_Data_PlanetsData[0];
 
     }
     

@@ -9,8 +9,8 @@ using UnityQuickSheet;
 ///
 public class Exoplanet_StarsUnique2AssetPostprocessor : AssetPostprocessor 
 {
-    private static readonly string filePath = "Assets/StarPlanetData/Exoplanet_StarsUnique2.xls";
-    private static readonly string assetFilePath = "Assets/StarPlanetData/Exoplanet_StarsUnique2.asset";
+    private static readonly string filePath = "Assets/StarPlanetDB/Exoplanet_StarsUnique2.xls";
+    private static readonly string assetFilePath = "Assets/StarPlanetDB/Exoplanet_StarsUnique2.asset";
     private static readonly string sheetName = "Exoplanet_StarsUnique2";
     
     static void OnPostprocessAllAssets (string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths)

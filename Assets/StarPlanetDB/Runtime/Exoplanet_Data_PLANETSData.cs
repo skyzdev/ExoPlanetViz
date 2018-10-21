@@ -6,7 +6,7 @@ using System.Collections;
 /// !!! DO NOT CHANGE Tabs to Spaces !!!
 /// 
 [System.Serializable]
-public class Exoplanet_Data_PLANETSData
+public class Exoplanet_Data_PlanetsData
 {
   [SerializeField]
   int loc_rowid;

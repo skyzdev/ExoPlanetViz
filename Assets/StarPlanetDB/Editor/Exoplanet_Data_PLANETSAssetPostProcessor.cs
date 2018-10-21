@@ -7,11 +7,11 @@ using UnityQuickSheet;
 ///
 /// !!! Machine generated code !!!
 ///
-public class Exoplanet_Data_PLANETSAssetPostprocessor : AssetPostprocessor 
+public class Exoplanet_Data_PlanetsAssetPostprocessor : AssetPostprocessor 
 {
     private static readonly string filePath = "Assets/StarPlanetDB/Exoplanet_Data_PLANETS.xls";
-    private static readonly string assetFilePath = "Assets/StarPlanetDB/Exoplanet_Data_PLANETS.asset";
-    private static readonly string sheetName = "Exoplanet_Data_PLANETS";
+    private static readonly string assetFilePath = "Assets/StarPlanetDB/Exoplanet_Data_Planets.asset";
+    private static readonly string sheetName = "Exoplanet_Data_Planets";
     
     static void OnPostprocessAllAssets (string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths)
     {
@@ -20,16 +20,16 @@ public class Exoplanet_Data_PLANETSAssetPostprocessor : AssetPostprocessor
             if (!filePath.Equals (asset))
                 continue;
                 
-            Exoplanet_Data_PLANETS data = (Exoplanet_Data_PLANETS)AssetDatabase.LoadAssetAtPath (assetFilePath, typeof(Exoplanet_Data_PLANETS));
+            Exoplanet_Data_Planets data = (Exoplanet_Data_Planets)AssetDatabase.LoadAssetAtPath (assetFilePath, typeof(Exoplanet_Data_Planets));
             if (data == null) {
-                data = ScriptableObject.CreateInstance<Exoplanet_Data_PLANETS> ();
+                data = ScriptableObject.CreateInstance<Exoplanet_Data_Planets> ();
                 data.SheetName = filePath;
                 data.WorksheetName = sheetName;
                 AssetDatabase.CreateAsset ((ScriptableObject)data, assetFilePath);
                 //data.hideFlags = HideFlags.NotEditable;
             }
             
-            //data.dataArray = new ExcelQuery(filePath, sheetName).Deserialize<Exoplanet_Data_PLANETSData>().ToArray();		
+            //data.dataArray = new ExcelQuery(filePath, sheetName).Deserialize<Exoplanet_Data_PlanetsData>().ToArray();		
 
             //ScriptableObject obj = AssetDatabase.LoadAssetAtPath (assetFilePath, typeof(ScriptableObject)) as ScriptableObject;
             //EditorUtility.SetDirty (obj);
@@ -37,7 +37,7 @@ public class Exoplanet_Data_PLANETSAssetPostprocessor : AssetPostprocessor
             ExcelQuery query = new ExcelQuery(filePath, sheetName);
             if (query != null && query.IsValid())
             {
-                data.dataArray = query.Deserialize<Exoplanet_Data_PLANETSData>().ToArray();
+                data.dataArray = query.Deserialize<Exoplanet_Data_PlanetsData>().ToArray();
                 ScriptableObject obj = AssetDatabase.LoadAssetAtPath (assetFilePath, typeof(ScriptableObject)) as ScriptableObject;
                 EditorUtility.SetDirty (obj);
             }

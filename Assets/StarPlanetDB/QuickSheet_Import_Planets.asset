@@ -15,7 +15,7 @@ MonoBehaviour:
   scriptFilePath: StarPlanetDB/Runtime
   editorScriptFilePath: StarPlanetDB/Editor
   sheetName: Exoplanet_Data_PLANETS.xls
-  workSheetName: Exoplanet_Data_PLANETS
+  workSheetName: Exoplanet_Data_Planets
   columnHeaderList:
   - type: 3
     name: loc_rowid
@@ -243,5 +243,5 @@ MonoBehaviour:
     isArray: 1
   excelFilePath: Assets/StarPlanetDB/Exoplanet_Data_PLANETS.xls
   SheetNames:
-  - Exoplanet_Data_PLANETS
+  - Exoplanet_Data_Planets
   currentSelectedSheet: 0

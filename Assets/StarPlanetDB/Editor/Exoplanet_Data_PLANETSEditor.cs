@@ -9,12 +9,12 @@ using UnityQuickSheet;
 ///
 /// !!! Machine generated code !!!
 ///
-[CustomEditor(typeof(Exoplanet_Data_PLANETS))]
-public class Exoplanet_Data_PLANETSEditor : BaseExcelEditor<Exoplanet_Data_PLANETS>
+[CustomEditor(typeof(Exoplanet_Data_Planets))]
+public class Exoplanet_Data_PlanetsEditor : BaseExcelEditor<Exoplanet_Data_Planets>
 {	    
     public override bool Load()
     {
-        Exoplanet_Data_PLANETS targetData = target as Exoplanet_Data_PLANETS;
+        Exoplanet_Data_Planets targetData = target as Exoplanet_Data_Planets;
 
         string path = targetData.SheetName;
         if (!File.Exists(path))
@@ -25,7 +25,7 @@ public class Exoplanet_Data_PLANETSEditor : BaseExcelEditor<Exoplanet_Data_PLANE
         ExcelQuery query = new ExcelQuery(path, sheet);
         if (query != null && query.IsValid())
         {
-            targetData.dataArray = query.Deserialize<Exoplanet_Data_PLANETSData>().ToArray();
+            targetData.dataArray = query.Deserialize<Exoplanet_Data_PlanetsData>().ToArray();
             EditorUtility.SetDirty(targetData);
             AssetDatabase.SaveAssets();
             return true;

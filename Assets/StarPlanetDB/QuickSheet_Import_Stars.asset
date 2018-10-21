@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80e14a72067f1ad408ec8d661bc560ce, type: 3}
-  m_Name: QuickSheetImport_Stars
+  m_Name: QuickSheet_Import_Stars
   m_EditorClassIdentifier: 
   templatePath: QuickSheet/ExcelPlugin/Templates
   scriptFilePath: StarPlanetDB/Runtime
@@ -149,7 +149,7 @@ MonoBehaviour:
     name: st_agelim
     isEnable: 0
     isArray: 0
-  excelFilePath: Assets/StarPlanetData/Exoplanet_StarsUnique2.xls
+  excelFilePath: Assets/StarPlanetDB/Exoplanet_StarsUnique2.xls
   SheetNames:
   - Exoplanet_StarsUnique2
   currentSelectedSheet: 0
